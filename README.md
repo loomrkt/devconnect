@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Projet : DevConnect – Réseau social pour développeurs avec Supabase & Auth.js
+Objectif
+Créer un réseau social simple permettant aux développeurs de connecter, partager des projets, poser des questions techniques, et créer des discussions autour de la programmation.
 
-## Getting Started
+Fonctionnalités principales
+✅ Authentification avec Auth.js (Google, GitHub ou email/password)
+✅ Création de profils d'utilisateurs avec des informations comme les compétences, les technologies maîtrisées, et les projets
+✅ Publication de posts pour partager des idées, des projets ou poser des questions
+✅ Commentaires sur les posts pour encourager la discussion
+✅ Système de "follow" pour suivre les utilisateurs et leurs publications
+✅ Stockage des données avec Supabase (PostgreSQL)
 
-First, run the development server:
+Technologies utilisées
+Next.js (frontend & backend API routes)
+Supabase (base de données et authentification)
+Auth.js (pour l’authentification des utilisateurs)
+Tailwind CSS (pour un design moderne et responsive)
+SWR ou React Query (pour gérer les requêtes en temps réel)
+Plan de développement (6h max)
+⏳ Heure 1-2 :
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Installer Next.js, Tailwind, Supabase & Auth.js
+Configurer l'authentification avec Google/GitHub/email
+Créer la base de données Supabase (users, posts, comments, followers)
+⏳ Heure 3-4 :
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Interface de création de profil avec informations de l'utilisateur (compétences, technologies, etc.)
+Interface pour créer, afficher et commenter des posts
+Créer un fil d'actualités pour voir les posts des utilisateurs suivis
+⏳ Heure 5-6 :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ajouter la fonctionnalité de suivre/arrêter de suivre des utilisateurs
+Améliorer l'interface pour une expérience utilisateur agréable sur mobile et desktop
+Tester l'ensemble des fonctionnalités et corriger les bugs éventuels
+Bonus (si tu as du temps en rab)
+🔹 Ajouter des tags pour catégoriser les posts (par exemple : JavaScript, React, Python, etc.)
+🔹 Permettre aux utilisateurs de publier des articles plus longs (type blog)
+🔹 Créer des notifications pour les nouveaux posts et commentaires
