@@ -42,12 +42,6 @@ interface Navbar1Props {
     title: string;
   };
   menu?: MenuItem[];
-  auth?: {
-    login: {
-      title: string;
-      url: string;
-    };
-  };
 }
 
 const Navbar1 = ({
@@ -68,9 +62,6 @@ const Navbar1 = ({
       url: "/about",
     },
   ],
-  auth = {
-    login: { title: "Se connecter", url: "#" }
-  },
 }: Navbar1Props) => {
   return (
     <section className="py-4 max-w-[1200px] px-4  mx-auto">
@@ -80,13 +71,13 @@ const Navbar1 = ({
           <div className="flex items-center gap-6 ">
             {/* Logo */}
             <Link href={logo.url} className="flex items-center gap-2">
-            <CldImage
-            width="40"
-            height="40"
-            src={logo.src}
-            sizes="100vw"
-            alt={logo.alt}
-            />
+              <CldImage
+                width="40"
+                height="40"
+                src={logo.src}
+                sizes="100vw"
+                alt={logo.alt}
+              />
               <span className="text-lg font-semibold tracking-tighter">
                 {logo.title}
               </span>
@@ -100,7 +91,7 @@ const Navbar1 = ({
             </div>
           </div>
           <div className="flex gap-2">
-              <SignIn/>
+            <SignIn />
           </div>
         </nav>
 
@@ -109,13 +100,13 @@ const Navbar1 = ({
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href={logo.url} className="flex items-center gap-2">
-            <CldImage
-            width="40"
-            height="40"
-            src={logo.src}
-            sizes="100vw"
-            alt={logo.alt}
-            />
+              <CldImage
+                width="40"
+                height="40"
+                src={logo.src}
+                sizes="100vw"
+                alt={logo.alt}
+              />
             </Link>
             <Sheet>
               <SheetTrigger asChild>
@@ -127,12 +118,12 @@ const Navbar1 = ({
                 <SheetHeader>
                   <SheetTitle>
                     <Link href={logo.url} className="flex items-center gap-2">
-                    <CldImage
-                      width="40"
-                      height="40"
-                      src={logo.src}
-                      sizes="100vw"
-                      alt={logo.alt}
+                      <CldImage
+                        width="40"
+                        height="40"
+                        src={logo.src}
+                        sizes="100vw"
+                        alt={logo.alt}
                       />
                     </Link>
                   </SheetTitle>
@@ -147,7 +138,7 @@ const Navbar1 = ({
                   </Accordion>
 
                   <div className="flex flex-col gap-3">
-                    <SignIn/>
+                    <SignIn />
                   </div>
                 </div>
               </SheetContent>
