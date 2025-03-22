@@ -68,7 +68,7 @@ const Faq = () => {
             <img
               src={activeImage}
               alt="Faq preview"
-              className="aspect-[4/3] rounded-md object-cover pl-4 h-full w-full"
+              className="aspect-[4/3] rounded-md object-cover h-full w-full"
             />
           </div>
           <div className="w-full md:w-1/2">
@@ -83,7 +83,11 @@ const Faq = () => {
                     className="cursor-pointer py-5 !no-underline transition"
                   >
                     <h6
-                      className={`text-xl font-semibold ${tab.id === activeTabId ? "text-foreground" : "text-muted-foreground"}`}
+                      className={`text-xl font-semibold ${
+                        tab.id === activeTabId
+                          ? "text-white"
+                          : "text-muted-foreground"
+                      }`}
                     >
                       {tab.title}
                     </h6>
@@ -99,7 +103,7 @@ const Faq = () => {
                         height={200}
                         src={tab.image}
                         alt={tab.title}
-                        />
+                      />
                     </div>
                   </AccordionContent>
                 </AccordionItem>
