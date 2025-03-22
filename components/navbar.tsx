@@ -46,7 +46,7 @@ interface Navbar1Props {
 
 const Navbar1 = ({
   logo = {
-    url: "http://localhost:3000",
+    url: "/",
     src: "https://res.cloudinary.com/djqniifaa/image/upload/v1742594483/vector-logo-illustration-hexagon-gradient-colorful-style_116762-6152_1-removebg-preview_idzfyl.ico",
     alt: "logo",
     title: "DevConnect",

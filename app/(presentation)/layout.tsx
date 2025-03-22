@@ -1,16 +1,12 @@
 import { Navbar1 } from "@/components/navbar";
-import { Metadata } from "next";
+import FooterPage from "@/components/presentation/accuiel/footer";
 
-export const metadata: Metadata = {
-    title: "DevConnect - accuiel",
-    description: "Accuiel de DevConnect",
-  };
-
-export default function Layout({children}: {children: React.ReactNode}) {
-    return (
-        <section>
-            <Navbar1/>
-            {children}
-        </section>
-    );
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <section>
+      <Navbar1 />
+      {children}
+      <FooterPage />
+    </section>
+  );
 }
