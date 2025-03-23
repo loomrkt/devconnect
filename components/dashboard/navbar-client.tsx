@@ -21,7 +21,12 @@ interface NavbarClientProps {
     alt: string;
     title: string;
   };
-  user: any;
+  user: {
+    name: string;
+    image: string;
+    email: string;
+    githubUrl: string;
+  };
 }
 
 const NavbarClient = ({
