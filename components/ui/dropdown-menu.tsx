@@ -26,10 +26,10 @@ function DropdownMenuTrigger({
   return (
     <DropdownMenuPrimitive.Trigger
       data-slot="dropdown-menu-trigger"
-      className="rounded-full p-2 border border-transparent focus:outline-none hover:bg-neutral-800 bg-neutral-900/100 cursor-pointer"
+      className="rounded-full focus:outline-none cursor-pointer"
       {...props}
     />
-  )
+  );
 }
 
 function DropdownMenuContent({

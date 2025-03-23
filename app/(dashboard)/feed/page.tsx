@@ -1,10 +1,5 @@
-import SignOut from "@/components/sign-out";
+import { auth } from "@/auth";
 
-export default function Page() {
-  return (
-    <>
-      <div>feed</div>
-      <SignOut />
-    </>
-  );
+export default async function Page() {
+  return <>hello</>;
 }
