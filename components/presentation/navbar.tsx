@@ -1,5 +1,5 @@
  "use client"
-import { Menu } from "lucide-react";
+import { Menu, User } from "lucide-react";
 
 import {
   Accordion,
@@ -23,8 +23,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from 'next/link';
-import SignIn from "./sign-in";
+import SignIn from "../sign-in";
 import { CldImage } from "next-cloudinary";
+import { useSession } from "next-auth/react";
 
 interface MenuItem {
   title: string;
@@ -63,6 +64,9 @@ const Navbar1 = ({
     },
   ],
 }: Navbar1Props) => {
+  // Get session data
+  const { data: session, status } = useSession();
+  const isAuthenticated = status === "authenticated";
   return (
     <section className="py-4 max-w-[1200px] px-4  mx-auto">
       <div className="container mx-auto">
@@ -91,7 +95,13 @@ const Navbar1 = ({
             </div>
           </div>
           <div className="flex gap-2">
-            <SignIn />
+            { isAuthenticated? <Link href="/feed"><Button
+                  asChild
+                  size="lg"
+                  className="cursor-pointer"
+                >
+                  <span><User/>Dashboard </span></Button></Link> :
+            <SignIn />}
           </div>
         </nav>
 
@@ -109,12 +119,12 @@ const Navbar1 = ({
               />
             </Link>
             <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
+              <SheetTrigger asChild className="bg-transparent hover:bg-transparent hover:text-white cursor-pointer hover:scale-105 ">
+                <Button variant="outline" size="icon" className="bg-transparent text-white">
                   <Menu className="size-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
+              <SheetContent className="overflow-y-auto bg-neutral-950 lg:hidden">
                 <SheetHeader>
                   <SheetTitle>
                     <Link href={logo.url} className="flex items-center gap-2">
@@ -138,7 +148,13 @@ const Navbar1 = ({
                   </Accordion>
 
                   <div className="flex flex-col gap-3">
-                    <SignIn />
+                  { isAuthenticated? <Link href="/feed"><Button
+                  asChild
+                  size="lg"
+                  className="cursor-pointer w-full"
+                >
+                  <span><User/>Dashboard </span></Button></Link> :
+                  <SignIn />}
                   </div>
                 </div>
               </SheetContent>

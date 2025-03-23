@@ -1,4 +1,5 @@
 import { auth } from "@/auth";
+import Navbar from "@/components/dashboard/navbar";
 import { redirect } from "next/navigation";
 
 export default async function Layout({
@@ -11,5 +12,10 @@ export default async function Layout({
     redirect("/");
   }
 
-  return <section>{children}</section>;
+  return (
+    <section>
+      <Navbar />
+      {children}
+    </section>
+  );
 }

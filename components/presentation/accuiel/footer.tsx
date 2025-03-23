@@ -54,7 +54,7 @@ const FooterPage = () => {
               <li key={title}>
                 <Link
                   href={href}
-                  className="text-muted-foreground hover:text-foreground font-medium"
+                  className="text-muted-foreground hover:text-white font-medium"
                 >
                   {title}
                 </Link>

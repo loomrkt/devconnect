@@ -5,7 +5,7 @@ import SignIn from "@/components/sign-in";
 const Cta = () => {
   return (
     <section className="py-10 sm:pb-32 max-w-[1200px] px-4 mx-auto">
-      <div className="container">
+      <div className="container mx-auto">
         <div className="flex flex-col items-center justify-between gap-8 rounded-lg bg-neutral-900/70 px-6 py-10 md:flex-row lg:px-20 lg:py-16">
           <div className="">
             <h4 className="mb-1 text-2xl font-bold md:text-3xl">DevConnect</h4>

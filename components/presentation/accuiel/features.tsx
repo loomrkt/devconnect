@@ -39,7 +39,7 @@ import {
   }: FeaturesProps) => {
     return (
       <section className="py-10 sm:py-32 max-w-[1200px] px-4 mx-auto">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="mb-10 md:mb-20">
             <h2 className="mb-2 text-center text-3xl font-semibold lg:text-5xl">
               {heading}
