@@ -65,8 +65,8 @@ const Navbar1 = ({
   ],
 }: Navbar1Props) => {
   // Get session data
-  const { data: session, status } = useSession();
-  const isAuthenticated = status === "authenticated";
+  const data = useSession();
+  const isAuthenticated = data.status === "authenticated";
   return (
     <section className="py-4 max-w-[1200px] px-4  mx-auto">
       <div className="container mx-auto">
