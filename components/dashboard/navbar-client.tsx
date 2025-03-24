@@ -1,18 +1,10 @@
 "use client"
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
+
 import { Search } from "lucide-react";
-import SignOut from "../sign-out";
 import { Input } from "../ui/input";
-import Image from "next/image";
+import UserDrop from "./userDrop";
 
 interface NavbarClientProps {
   logo?: {
@@ -36,11 +28,11 @@ const NavbarClient = ({
     alt: "logo",
     title: "DevConnect",
   },
-    user,
+  user,
 }: NavbarClientProps) => {
   return (
-    <section className="py-4 max-w-[1200px] px-4  mx-auto">
-      <div className="container mx-auto">
+    <section className=" w-screen bg-neutral-950 shadow-md shadow-amber-50/5">
+      <div className="container max-w-[1200px] mx-auto py-2  px-4">
         <nav className=" justify-between flex gap-4 items-center">
           <div className="flex items-center gap-6 ">
             {/* Logo */}
@@ -65,33 +57,7 @@ const NavbarClient = ({
               className="w-full border-0 focus:bg-transparent"
             />
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger>
-            <img
-            src={user.image!}
-            alt="GitHub profile"
-            className="w-10 h-10 border-gray-100/30 border rounded-full"
-          />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="max-w-56">
-              <DropdownMenuLabel><div className="flex items-center gap-2">
-                <Image
-                        width="40"
-                        height="40"
-                        src={user.image!}
-                        alt="GitHub profile"
-                        className="w-10 h-10 border-gray-100/30 border rounded-full"
-                    />
-                <p>{user.name}</p>
-                </div></DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem variant="destructive" >
-                <SignOut />
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <UserDrop user={user} />
         </nav>
       </div>
     </section>

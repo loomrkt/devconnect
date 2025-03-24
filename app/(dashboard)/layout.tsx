@@ -13,7 +13,7 @@ export default async function Layout({
   }
 
   return (
-    <section>
+    <section className="bg-neutral-800/70 h-screen w-screen flex flex-col">
       <Navbar />
       {children}
     </section>
